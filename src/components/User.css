@@ -1,0 +1,83 @@
+.login-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 50px;
+  box-shadow: none;
+  background-color: rgba(0, 0, 255, 0.5);
+  border-radius: 10px;
+}
+.login-row {
+  display: flex;
+  margin: 10px;
+  align-items: flex-end;
+}
+.form-label {
+  width: 100px;
+  text-align: left;
+}
+.form-control {
+  flex: 1;
+}
+input.form-control {
+  border: 1px solid rgba(0, 255, 191, 0.432);
+  padding: 5px 10px;
+  background-color: #ffff;
+}
+input.form-control:focus {
+  outline-color: rgb(121, 120, 120);
+}
+input.form-control::placeholder {
+  color: rgb(42, 165, 89);
+}
+.action-container {
+  display: flex;
+  justify-content: end;
+}
+.btn {
+  height: 25px;
+  border: 1px solid rgb(255, 255, 255);
+  /*background-color: blueviolet;*/
+  border-radius: 5px;
+  width: 50px;
+  margin: 5px;
+}
+.btn:last-of-type {
+  margin-right: 0;
+}
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background-color: rgb(255, 127, 191);
+}
+.btn:active {
+  background-color: rgb(195, 255, 127);
+}
+/*.btn.primary {
+  background-color: rgb(156, 26, 69);
+  color: rgb(255, 255, 255);
+  border: 1px, solid, rgba(255, 0, 200, 0);
+}
+.btn.primary:hover,
+.btn.primary:active,
+.btn.primary:focus {
+  background-color: blue;
+}
+.btn.primary:active {
+  background-color: aquamarine;
+}*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 10px;
+}
+td,
+th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
