@@ -1,30 +1,35 @@
 //import { Link } from "react-router-dom";
 import Button from "./button";
+import { useParams } from "react-router-dom"; 
 //import {useEffect } from "react";
 import { useState } from "react";
-const UpdateForme=(props)=>{
+const UpdateForme=()=>{
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [setUsers] = useState([]);
-
+  const [users,setUsers] = useState([]);
+  const params=useParams()
+  const id=params.id
   const update=(e,user)=>{
-    //console.log(user);
     e.preventDefault();
-    
+     
     const requestOptions = {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' }, body:JSON.stringify(user ) 
   };
-  fetch(`http://localhost:3001/user/update/${user._id}`, requestOptions)
+  fetch(`http://localhost:3001/user/update/${id}`, requestOptions)
       .then(response => response.json())
-      .then( (user)=>
+      .then(  (user)=>
       {
         
-        console.log(user._id);
-        setUsers(prev=>[...prev,user])      
-      }
-       )
+       setUsers(prev=>[...prev,user])
+        /*return new Promise((resolve,reject)=>{
+          if(user)resolve(setUsers(prev=>[...prev,user]) )
+          else reject("error")
+        }      
+      );*/
+    })
   }
   const onReset = (e) => {
     e.preventDefault()

@@ -4,14 +4,9 @@ import Forme from "./forme";
 import Table from "./table"; 
 import Navigation from "./navigation";
 import UpdateForme from './updateForme';
-import NotFound from './notFound';
 import "./User.css"
-//import { useState } from "react";
 function User() {
-  
-
-  return (
-    
+  return (   
     <div>   
       <BrowserRouter>
       <Navigation/>
@@ -19,8 +14,6 @@ function User() {
          <Route  path="/" element={<Forme/> }/> 
          <Route  path="/table" element={<Table/>}/>   
          <Route  path="/user/update/:id" element={<UpdateForme/> }/> 
-         
-         <Route   element={<NotFound/> }/>
       </Routes>
       </BrowserRouter>  
       

@@ -1,8 +1,9 @@
 import React from "react"
 import {useEffect } from "react";
 import { useState } from "react";
+//import { createHashHistory } from "history";
 import Button from "./button";
-//import {useHistory} from "react-router-dom"
+import { Link } from "react-router-dom";
 const Table=(props)=>{
   const [users,setUsers]=useState([]);
   //const navigate = useNavigate();
@@ -54,7 +55,7 @@ fetch(`http://localhost:3001/user/${user._id}`, requestOptions)
               <td>{user.firstName}</td>
               <td>{user.lastName}</td>
               <td>{user.email}</td>
-              <td> <Button text="edit" /*onClick={()=>history.push(`/user/update/${user._id}`)}*//>
+              <td> <Link to={`/user/update/${user._id}`}><Button text="edit"/></Link>
               <Button text="delete" onClick={(e)=>onDelete(e,user)}/></td>
 
           </tr>
